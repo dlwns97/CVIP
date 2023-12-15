@@ -13,7 +13,7 @@
 </div>
 
 
-This repository relies on my SimCLR implementation, which can be found [here](https://github.com/spijkervet/simclr) and on my `torchaudio-augmentations` package, found [here](https://github.com/Spijkervet/torchaudio-augmentations).
+This repository relies on CLMR implementation, which can be found [here](https://github.com/Spijkervet/CLMR).
 
 
 
