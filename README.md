@@ -30,7 +30,7 @@ This repository relies on CLMR implementation, which can be found [here](https:/
 ## Results
 
 <div align="right">
-  <img width="50%" alt="Music6" src="https://github.com/dlwns97/CVIP/blob/master/music_6.png">
+  <img width="50%" alt="Music" src="https://github.com/dlwns97/CVIP/blob/master/%EC%9D%8C%EC%95%85%20%EC%83%9D%EC%84%B1%20%EC%9D%B4%EB%AF%B8%EC%A7%80.png">
 </div>
 <div align="right">
   < 이미지 생성 결과 >
