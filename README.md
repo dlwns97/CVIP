@@ -27,7 +27,7 @@ In this work, we introduce SimCLR to the music domain and contribute a large cha
 *This is the CLMR v2 implementation, for the original implementation go to the [`v1`](https://github.com/Spijkervet/CLMR/tree/v1) branch*
 
 <div align="center">
-  <img width="50%" alt="CLMR model" src="[https://github.com/Spijkervet/CLMR/blob/master/media/clmr_model.png](https://github.com/dlwns97/CVIP/blob/master/architecture.png)](https://github.com/dlwns97/CVIP/blob/master/architecture.png)?raw=true">
+  <img width="50%" alt="CLMR model" src="!(https://github.com/dlwns97/CVIP/raw/master/architecture.png)(https://github.com/dlwns97/CVIP/blob/master/architecture.png)?raw=true">
 </div>
 <div align="center">
   An illustration of CLMR.
