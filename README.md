@@ -12,9 +12,9 @@
   < 이번 과제의 전체 아키텍처>
 </div>
 
-#
+.
 This repository relies on CLMR implementation, which can be found [here](https://github.com/Spijkervet/CLMR).
-#
+.
 
 
 ## Quickstart
