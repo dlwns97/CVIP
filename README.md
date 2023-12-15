@@ -1,4 +1,4 @@
-# Contrastive Learning of Musical Representations
+# Music to Mutilabel for Image generating Sentence
 
 PyTorch implementation of [Contrastive Learning of Musical Representations](https://arxiv.org/abs/2103.09410) by Janne Spijkervet and John Ashley Burgoyne.
 
