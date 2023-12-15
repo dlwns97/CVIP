@@ -1,5 +1,5 @@
 # Music to Mutilabel for Image generating Sentence
-# Sogang Univ. Computer vision and image processing lab.
+# Sogang Univ. Computer Vision and Image Processing lab.
 # Big-data computing project
 
 인공지능(AI)을 활용한 음악 분석은 현대 음악 산업과 예술 분야에 혁신적인 변화를 가져오고 있다. AI는 음악의 특징, 구조, 리듬, 음성 톤 등을 학습하여 음악을 이해하고, 감정 분석과 사용자 맞춤형 음악 추천에 활용된다. 음악 분석을 기반으로 AI는 음악 생성, 합성, 악보 제작 등 창의적인 지원을 할 수 있다. 음악과 시각 예술 간의 상호작용을 위해 AI는 음악을 시각적으로 표현하며, 이는 콘서트, 음악 비디오, 앨범 표지 등에 활용될 수 있다. 
