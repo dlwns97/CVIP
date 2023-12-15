@@ -18,7 +18,7 @@ class ContrastiveDataset(Dataset):
         if idx in self.ignore_idx:
             return self[idx + 1]
 
-        audio, label = self.dataset[idx]
+        clip_id, audio, label = self.dataset[idx]
 
         if audio.shape[1] < self.input_shape[1]:
             self.ignore_idx.append(idx)
@@ -26,13 +26,13 @@ class ContrastiveDataset(Dataset):
 
         if self.transform:
             audio = self.transform(audio)
-        return audio, label
+        return clip_id, audio, label
 
     def __len__(self) -> int:
         return len(self.dataset)
 
     def concat_clip(self, n: int, audio_length: float) -> Tensor:
-        audio, _ = self.dataset[n]
+        _, audio, _ = self.dataset[n]
         batch = torch.split(audio, audio_length, dim=1)
         batch = torch.cat(batch[:-1])
         batch = batch.unsqueeze(dim=1)

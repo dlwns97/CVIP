@@ -22,6 +22,8 @@ def get_dataset(dataset, dataset_dir, subset, download=True):
         d = MAGNATAGATUNE(root=dataset_dir, download=download, subset=subset)
     elif dataset == "msd":
         d = MillionSongDataset(root=dataset_dir, subset=subset)
+    elif dataset == "temp":
+        d = AUDIO(root=dataset_dir) 
     else:
         raise NotImplementedError("Dataset not implemented")
     return d

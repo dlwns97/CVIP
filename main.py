@@ -5,6 +5,8 @@ from pytorch_lightning import Trainer
 from pytorch_lightning.loggers import TensorBoardLogger
 from torch.utils.data import DataLoader
 
+from pytorch_lightning.callbacks import ModelCheckpoint
+
 # Audio Augmentations
 from torchaudio_augmentations import (
     RandomApply,
@@ -110,7 +112,13 @@ if __name__ == "__main__":
     # ------------
     # encoder
     # ------------
-    encoder = SampleCNN(
+    # encoder = SampleCNN(
+    #     strides=[3, 3, 3, 3, 3, 3, 3, 3, 3],
+    #     supervised=args.supervised,
+    #     out_dim=train_dataset.n_classes,
+    # )
+
+    encoder = SampleCNN_1550(
         strides=[3, 3, 3, 3, 3, 3, 3, 3, 3],
         supervised=args.supervised,
         out_dim=train_dataset.n_classes,
@@ -134,12 +142,19 @@ if __name__ == "__main__":
         # ------------
         # training
         # ------------
-
         if args.supervised:
             early_stopping = EarlyStopping(monitor="Valid/loss", patience=20)
         else:
             early_stopping = None
-
+        
+        checkpoint_callback = ModelCheckpoint(
+            monitor='Train/loss',
+            dirpath='./checkpoint_1000/',
+            filename='best-model-{epoch:02d}-{Train/loss:.2f}',
+            save_top_k=1,
+            mode='min',
+        )
+        
         trainer = Trainer.from_argparse_args(
             args,
             logger=logger,
@@ -148,6 +163,7 @@ if __name__ == "__main__":
             log_every_n_steps=10,
             check_val_every_n_epoch=1,
             accelerator=args.accelerator,
+            callbacks=checkpoint_callback
         )
         trainer.fit(module, train_loader, valid_loader)
 

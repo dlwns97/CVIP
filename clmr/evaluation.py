@@ -16,6 +16,7 @@ def evaluate(
 ) -> dict:
     est_array = []
     gt_array = []
+    clip_id_order = []
 
     encoder = encoder.to(device)
     encoder.eval()
@@ -26,7 +27,7 @@ def evaluate(
 
     with torch.no_grad():
         for idx in tqdm(range(len(test_dataset))):
-            _, label = test_dataset[idx]
+            clip_id, others, label = test_dataset[idx]
             batch = test_dataset.concat_clip(idx, audio_length)
             batch = batch.to(device)
 
@@ -41,6 +42,7 @@ def evaluate(
                 output = F.softmax(output, dim=1)
 
             track_prediction = output.mean(dim=0)
+            clip_id_order.append(clip_id)
             est_array.append(track_prediction)
             gt_array.append(label)
 
@@ -49,12 +51,20 @@ def evaluate(
         gt_array = torch.stack(gt_array, dim=0).cpu().numpy()
         roc_aucs = metrics.roc_auc_score(gt_array, est_array, average="macro")
         pr_aucs = metrics.average_precision_score(gt_array, est_array, average="macro")
+        #accuracy = metrics.accuracy_score(gt_array, est_array)
+        #return {"GT_Array" : gt_array, "EST_Array" : est_array}
+
+        # 기존 출력 결과에, accuaracy, gt label, prediction 추가 #
+
         return {
-            "PR-AUC": pr_aucs,
-            "ROC-AUC": roc_aucs,
-        }
+             "clip_id": clip_id_order,
+             "PR-AUC": pr_aucs,
+             "ROC-AUC": roc_aucs, 
+             "GT_ARRAY": gt_array,
+             "EST_ARRAY": est_array
+         }
 
     est_array = torch.stack(est_array, dim=0)
     _, est_array = torch.max(est_array, 1)  # extract the predicted labels here.
     accuracy = metrics.accuracy_score(gt_array, est_array)
-    return {"Accuracy": accuracy}
+    return {"Accuracy": accuracy, "GT_Array" : gt_array, "EST_Array" : est_array}

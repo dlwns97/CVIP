@@ -43,16 +43,19 @@ def get_file_list(root, subset, split):
     if subset == "train":
         if split == "pons2017":
             fl = open(os.path.join(root, "train_gt_mtt.tsv")).read().splitlines()
+            # fl = open(os.path.join(root, "train_gt_mtt_v4.tsv")).read().splitlines()
         else:
             fl = np.load(os.path.join(root, "train.npy"))
     elif subset == "valid":
         if split == "pons2017":
             fl = open(os.path.join(root, "val_gt_mtt.tsv")).read().splitlines()
+            # fl = open(os.path.join(root, "val_gt_mtt_v4.tsv")).read().splitlines()
         else:
             fl = np.load(os.path.join(root, "valid.npy"))
     else:
         if split == "pons2017":
-            fl = open(os.path.join(root, "test_gt_mtt.tsv")).read().splitlines()
+            #fl = open(os.path.join(root, "test_gt_mtt.tsv")).read().splitlines()
+            fl = open(os.path.join(root, "test_gt_mtt_v4.tsv")).read().splitlines()
         else:
             fl = np.load(os.path.join(root, "test.npy"))
 
@@ -180,7 +183,7 @@ class MAGNATAGATUNE(Dataset):
 
         audio, _ = self.load(n)
         label = FloatTensor(label)
-        return audio, label
+        return clip_id, audio, label
 
     def __len__(self) -> int:
         return len(self.fl)
