@@ -21,12 +21,6 @@ This repository relies on CLMR implementation, which can be found [here](https:/
 
 ## Pre-train on your own folder of audio files
 
-
-```
-
-```
-
-
 ## Results
 
 <div align="center">
