@@ -20,12 +20,10 @@ This repository relies on CLMR implementation, which can be found [here](https:/
 
 
 ## Pre-train on your own folder of audio files
-Simply run the following command to pre-train the CLMR model on a folder containing .wav files (or .mp3 files when editing `src_ext_audio=".mp3"` in `clmr/datasets/audio.py`). You may need to convert your audio files to the correct sample rate first, before giving it to the encoder (which accepts `22,050Hz` per default).
+
 
 ```
-python preprocess.py --dataset audio --dataset_dir ./directory_containing_audio_files
 
-python main.py --dataset audio --dataset_dir ./directory_containing_audio_files
 ```
 
 
