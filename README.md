@@ -11,7 +11,7 @@
   <img width="100%" alt="CLMR model" src="https://github.com/dlwns97/CVIP/raw/master/architecture.png">
 </div>
 <div align="center">
-  < 이번 과제의 전체 아키텍처>
+  < 이번 과제의 전체 아키텍처 >
 </div>
 
 
@@ -34,7 +34,7 @@ This repository relies on CLMR implementation, which can be found [here](https:/
 </div>
 <div align="center">
   < 이미지 생성 결과 >
-
+</div>
 
 
 
