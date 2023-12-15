@@ -1,30 +1,7 @@
 # Music to Mutilabel for Image generating Sentence
 
-PyTorch implementation of [Contrastive Learning of Musical Representations](https://arxiv.org/abs/2103.09410) by Janne Spijkervet and John Ashley Burgoyne.
+인공지능(AI)을 활용한 음악 분석은 현대 음악 산업과 예술 분야에 혁신적인 변화를 가져오고 있다. AI는 음악의 특징, 구조, 리듬, 음성 톤 등을 학습하여 음악을 이해하고, 감정 분석과 사용자 맞춤형 음악 추천에 활용된다. 음악 분석을 기반으로 AI는 음악 생성, 합성, 악보 제작 등 창의적인 지원을 할 수 있다. 음악과 시각 예술 간의 상호작용을 위해 AI는 음악을 시각적으로 표현하며, 이는 콘서트, 음악 비디오, 앨범 표지 등에 활용될 수 있다. 이 과제는 음악 클립에 대한 멀티 태그를 수정, 재정의하고, 이를 기반으로 문장 생성 및 음악을 시각적으로 표현하는 이미지를 생성하는 것을 목표로 한다.
 
-![CLMR](https://github.com/spijkervet/clmr/actions/workflows/clmr.yml/badge.svg)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Njz8EoN4br587xjpRKcssMuqQY6Cc5nj#scrollTo=aeKVT59FhWzV)
-
-[![arXiv](https://img.shields.io/badge/arXiv-2103.09410-b31b1b.svg)](https://arxiv.org/abs/2103.09410)
-[![Supplementary Material](https://img.shields.io/badge/Supplementary%20Material-2103.09410-blue.svg)](https://github.com/Spijkervet/CLMR/releases/download/2.1/CLMR.-.Supplementary.Material.pdf)
-
-<div class="header-image" style="display: flex; flex-direction: column; align-items: center;">
-  <a href="https://spijkervet.github.io/CLMR/examples/clmr-onnxruntime-web" target="_blank" style="text-decoration: none;">
-      <span style="font-size: 1.5rem; font-weight: 100;">CLMR x</span>
-      <img class="onnx-image" style="height: 20px;" src="https://onnxruntime.ai/images/svg/ONNX-Runtime-logo.svg"/>
-  </a>
-</div>
-
-You can run a pre-trained CLMR model directly from within your browser using ONNX Runtime: [here](https://spijkervet.github.io/CLMR/examples/clmr-onnxruntime-web).
-
-
-In this work, we introduce SimCLR to the music domain and contribute a large chain of audio data augmentations, to form a simple framework for self-supervised learning of raw waveforms of music: CLMR. We evaluate the performance of the self-supervised learned representations on the task of music classification.
-
-- We achieve competitive results on the MagnaTagATune and Million Song Datasets relative to fully supervised training, despite only using a linear classifier on self-supervised learned representations, i.e., representations that were learned task-agnostically without any labels.
-- CLMR enables efficient classification: with only 1% of the labeled data, we achieve similar scores compared to using 100% of the labeled data.
-- CLMR is able to generalise to out-of-domain datasets: when training on entirely different music datasets, it is still able to perform competitively compared to fully supervised training on the target dataset.
-
-*This is the CLMR v2 implementation, for the original implementation go to the [`v1`](https://github.com/Spijkervet/CLMR/tree/v1) branch*
 
 <div align="center">
   <img width="100%" alt="CLMR model" src="https://github.com/dlwns97/CVIP/raw/master/architecture.png">
