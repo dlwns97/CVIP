@@ -7,6 +7,10 @@
 이 과제는 음악 클립에 대한 멀티 태그를 수정, 재정의하고, 이를 기반으로 문장 생성 및 음악을 시각적으로 표현하는 이미지를 생성하는 것을 목표로 한다.
 
 
+### Ref
+This repository relies on CLMR implementation, which can be found [here](https://github.com/Spijkervet/CLMR).
+
+
 ## 과제 목표
  25,863개의 음악 클립으로 구성된 MagnaTagATune 데이터셋을 사용하여, Contrastive Learning of Musical Representations (CLMR) 모델로 음악의 태그를 추출하고 이미지 생성하는 것이 주된 목표이다. 데이터셋의 태그를 재정의하여 음악 클립과 태그 간의 정확성을 향상시키는 것이 중요한 과제이다. 태그를 기반으로 LLM을 사용하여 문장을 생성하고, 이를 이미지 생성 모델의 입력으로 사용한다. 생성된 이미지는 음악 클립의 특성을 시각적으로 표현하는 데 사용되며, 인간 중심 평가를 통해 비교 분석될 예정이다. 이 과제는 음악과 시각 예술의 통합을 탐구하고, AI를 통한 창의적인 예술 표현의 새로운 가능성을 제시한다.
  
@@ -19,11 +23,6 @@
 <div align="center">
   < 이번 과제의 전체 아키텍처 >
 </div>
-
-
-
-### Ref
-This repository relies on CLMR implementation, which can be found [here](https://github.com/Spijkervet/CLMR).
 
 
 ## Results
