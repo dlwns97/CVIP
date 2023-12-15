@@ -29,8 +29,8 @@ This repository relies on CLMR implementation, which can be found [here](https:/
 
 ## Results
 
-<div align="center">
-  <img width="100%" alt="Music6" src="https://github.com/dlwns97/CVIP/blob/master/music_6.png">
+<div align="left">
+  <img width="50%" alt="Music6" src="https://github.com/dlwns97/CVIP/blob/master/music_6.png">
 </div>
 <div align="center">
   < 음악 6의 생성 결과 >
