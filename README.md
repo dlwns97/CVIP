@@ -36,6 +36,11 @@ This repository relies on CLMR implementation, which can be found [here](https:/
 </div>
 
 ### 평가 방식
-
+<div align="center">
+  <img width="80%" alt="googleform" src="https://github.com/dlwns97/CVIP/blob/master/form.png">
+</div>
+<div align="center">
+  < 평가 구글 폼 양식 >
+</div>
 
 
